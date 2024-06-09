@@ -30,25 +30,25 @@ public class SubCategoryController {
         (categoryname), HttpStatus.OK);
     }
 
-    @PostMapping(consumes = 
-    { MediaType.APPLICATION_JSON_VALUE,
-        MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<Message> create
-    (@Valid @RequestPart("subCategory") String stringSubCategory, 
-    BindingResult bindingResult){
-    try {
-        SubCategory subCategory = subCategoryService.
-        convertJsonToSubCategory(stringSubCategory);
+    @PostMapping(consumes = { MediaType.APPLICATION_JSON_VALUE,MediaType.MULTIPART_FORM_DATA_VALUE})
+    public ResponseEntity<Message> create(@Valid @RequestPart("subCategory") String stringSubCategory,BindingResult bindingResult)
+    {
+        try {
+            SubCategory subCategory = subCategoryService.convertJsonToSubCategory(stringSubCategory);
+            this.subCategoryService.saveSubCategory(subCategory);
+            return new ResponseEntity<>(new Message("Actualizado correctamente"),HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(new Message("Revise los campos"),HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    /*
+    
+    public ResponseEntity<Message> create(@RequestBody SubCategory subCategory){
         this.subCategoryService.saveSubCategory(subCategory);
-        return new ResponseEntity<>
-        (new Message("Actualizado correctamente")
-        ,HttpStatus.OK);
-    } catch (Exception e) {
-        return new ResponseEntity<>(new Message
-        ("Revise los campos"),
-        HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new Message("Creado"),HttpStatus.OK);
     }
-    }
+     */
     
 
     @GetMapping()

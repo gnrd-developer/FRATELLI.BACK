@@ -41,8 +41,8 @@ public class SubCategoryService {
     public SubCategory convertJsonToSubCategory(String stringSubCategory) 
     throws JsonProcessingException{
         ObjectMapper objectMapper = new ObjectMapper();
-        SubCategory subcategory = objectMapper.readValue
+        SubCategory subCategory = objectMapper.readValue
         (stringSubCategory, SubCategory.class);
-        return subcategory;
+        return subCategory;
     }
 }
