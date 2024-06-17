@@ -8,7 +8,7 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.souldev</groupId>
+	<groupId>com.gnrd</groupId>
 	<artifactId>security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>securityS</name>
@@ -60,6 +60,7 @@
 		</dependency>
 		<!--No es necesaria la dependencia de arriba si ya se tiene la dependencia
 		de spring starter web-->
+
 		
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -188,7 +189,7 @@
 				  <archive>
 					<manifest>
 					  <addClasspath>true</addClasspath>
-					  <mainClass>com.souldev.cart.ShoppingCartApplication</mainClass>
+					  <mainClass>com.gnrd.cart.ShoppingCartApplication</mainClass>
 					</manifest>
 				  </archive>
 				  <skip>true</skip>
