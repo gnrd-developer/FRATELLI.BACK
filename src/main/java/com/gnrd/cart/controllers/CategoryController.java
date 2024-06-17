@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 /* Esta importación es para todas las anotaciones
 del controlador web de Spring como @RestController, 
 @RequestMapping, @GetMapping, etc., que se utilizan para 
-mapear las solicitudes web a tus métodos de controlador.. */
+mapear las solicitudes web a tus métodos de controlador.... */
 
 @RestController
 @RequestMapping("/category")
