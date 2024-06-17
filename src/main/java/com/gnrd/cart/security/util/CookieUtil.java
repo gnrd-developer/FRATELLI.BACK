@@ -25,11 +25,13 @@ public class CookieUtil {
         Cookie cookie = new Cookie(name, null);
         cookie.setPath("/");
         cookie.setHttpOnly(true);
-        cookie.setDomain("localhost");
         cookie.setMaxAge(1);
-        /*cookie.setDomain("railway.app");
         cookie.setDomain("console.cloud.google.com");
-        */
         httpServletResponse.addCookie(cookie);
+        /*
+        cookie.setDomain("railway.app");
+        cookie.setDomain("console.cloud.google.com");
+        cookie.setDomain("localhost");
+        */
     }
 }
