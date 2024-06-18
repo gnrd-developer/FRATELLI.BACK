@@ -26,7 +26,7 @@ public class CookieUtil {
         cookie.setPath("/");
         cookie.setHttpOnly(true);
         cookie.setMaxAge(1);
-        cookie.setDomain("console.cloud.google.com");
+        cookie.setDomain(null);
         httpServletResponse.addCookie(cookie);
         /*
         cookie.setDomain("railway.app");
