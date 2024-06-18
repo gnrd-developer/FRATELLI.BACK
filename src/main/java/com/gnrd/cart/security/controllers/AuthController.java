@@ -64,7 +64,7 @@ public class AuthController {
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String jwt = jwtProvider.generateToken(authentication);
             /*CookieUtil.create(httpServletResponse, cookieName, jwt, false, -1, "railway.app");*/
-            CookieUtil.create(httpServletResponse, cookieName, jwt, false, -1, null);
+            CookieUtil.create(httpServletResponse, cookieName, jwt, false, -1, "cloud.google.com");
             /*CookieUtil.create(httpServletResponse, cookieName, jwt, false, -1, "localhost");
             CookieUtil.create(httpServletResponse, cookieName, jwt, false, -1, "console.cloud.google.com");*/
             return new ResponseEntity<>(new Message("Sesión iniciada"), HttpStatus.OK);
