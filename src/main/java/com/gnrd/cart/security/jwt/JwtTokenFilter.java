@@ -30,7 +30,8 @@ public class JwtTokenFilter extends OncePerRequestFilter  {
     @Value("${jwt.accessTokenCookieName}")
     private String cookieName;
     @Override
-    protected void doFilterInternal(@SuppressWarnings("null") HttpServletRequest req, @SuppressWarnings("null") HttpServletResponse res, @SuppressWarnings("null") FilterChain filterChain) 
+    protected void doFilterInternal(@SuppressWarnings("null") HttpServletRequest req, 
+    @SuppressWarnings("null") HttpServletResponse res, @SuppressWarnings("null") FilterChain filterChain) 
     throws ServletException, IOException{
         try {
             String token = getToken(req);

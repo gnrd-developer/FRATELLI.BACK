@@ -26,10 +26,11 @@ public class CookieUtil {
         cookie.setPath("/");
         cookie.setHttpOnly(true);
         cookie.setMaxAge(1);
-        cookie.setDomain("cloud.google.com");
+        cookie.setDomain("localhost");
         httpServletResponse.addCookie(cookie);
         /*
         cookie.setDomain("railway.app");
+        cookie.setDomain("cloud.google.com");
         cookie.setDomain("console.cloud.google.com");
         cookie.setDomain("localhost");
         */
